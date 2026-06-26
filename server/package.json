@@ -25,7 +25,8 @@
         "cookie-parser": "1.4.7",
         "helmet": "8.0.0",
         "compression": "1.8.1",
-        "formidable": "3.5.4"
+        "formidable": "3.5.4",
+        "lodash": "4.17.21"
     },
     "devDependencies": {
         "eslint": "^8.54.0",
