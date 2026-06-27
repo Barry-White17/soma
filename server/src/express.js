@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 app.use(
     cors({
         credentials: true,
-        origin: 'http://localhost:5173',
+        origin: 'https://soma-eta-lovat.vercel.app',
     }),
 )
 // parse body params and attache them to req.body
