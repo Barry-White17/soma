@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography'
 import { Link } from 'react-router-dom'
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
+import config from './../../config.js'
 
 // major changes in m5 as far as Grid is concerned
 // GridList has become ImageList
@@ -45,7 +46,7 @@ export default function FollowGrid(props) {
                         <ImageListItem style={{ height: 120 }} key={i}>
                             <Link to={'/user/' + person._id}>
                                 <Avatar
-                                    src={'/api/users/photo/' + person._id}
+                                    src={`${config.BACKEND_URL}/api/users/photo/${person._id}`}
                                     className={classes.bigAvatar}
                                 />
                                 <Typography className={classes.tileText}>
