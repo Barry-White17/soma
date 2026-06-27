@@ -39,10 +39,10 @@ export default function FollowGrid(props) {
     const { classes } = useStyles()
     return (
         <div className={classes.root}>
-            <GridList cellHeight={160} className={classes.gridList} cols={4}>
+            <ImageList cellHeight={160} className={classes.gridList} cols={4}>
                 {props.people.map((person, i) => {
                     return (
-                        <GridListTile style={{ height: 120 }} key={i}>
+                        <ImageListItem style={{ height: 120 }} key={i}>
                             <Link to={'/user/' + person._id}>
                                 <Avatar
                                     src={'/api/users/photo/' + person._id}
@@ -52,10 +52,10 @@ export default function FollowGrid(props) {
                                     {person.name}
                                 </Typography>
                             </Link>
-                        </GridListTile>
+                        </ImageListItem>
                     )
                 })}
-            </GridList>
+            </ImageList>
         </div>
     )
 }
