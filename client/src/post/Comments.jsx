@@ -10,6 +10,7 @@ import { comment, uncomment } from './api-post.js'
 import { Link } from 'react-router-dom'
 import IconButton from '@mui/material/IconButton'
 import TrashIcon from '@mui/icons-material/Delete'
+import config from './../../config.js'
 
 const useStyles = makeStyles()((theme) => ({
     cardHeader: {
@@ -119,7 +120,7 @@ export default function Comments(props) {
                     <Avatar
                         className={classes.smallAvatar}
                         src={
-                            '/api/users/photo/' +
+                            `${config.BACKEND_URL}/api/users/photo/` +
                             auth.isAuthenticated().user._id
                         }
                     />
